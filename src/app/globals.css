@@ -40,7 +40,6 @@ body {
   background-color: var(--clr-white-800);
   color: var(--clr-black-800);
   font-family: var(--ff-roboto), sans-serif;
-  padding: 24px 32px;
 }
 
 .roundCorners {
