@@ -3,7 +3,7 @@
 import { useGetMoviesQuery } from "@/redux/services/movieApi";
 import MoviePreview, { MovieDetails } from "../MoviePreview/MoviePreview";
 import style from "./style.module.css";
-import { selectCinemaId } from "@/redux/features/cinemaFilter/selector";
+import { selectCinemaId } from "@/redux/features/filters/selector";
 import { useSelector } from "react-redux";
 import { State } from "@/redux/store";
 

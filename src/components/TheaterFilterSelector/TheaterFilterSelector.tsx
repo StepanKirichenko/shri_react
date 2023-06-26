@@ -3,7 +3,7 @@
 import { useDispatch } from "react-redux";
 import Dropdown from "../Dropdown/Dropdown";
 import { CinemaDetails } from "../TheaterFilter/TheaterFilter";
-import { cinemaFilterActions } from "@/redux/features/cinemaFilter";
+import { filtersActions } from "@/redux/features/filters";
 
 interface TheaterFilterSelectorProps {
   cinemas: CinemaDetails[];
@@ -21,9 +21,9 @@ export default function TheaterFilterSelector({
 
   return (
     <Dropdown
-      placeholderText="Выберите жанр"
+      placeholderText="Выберите кинотеатр"
       options={options}
-      selectHandler={(value) => dispatch(cinemaFilterActions.setFilter(value))}
+      selectHandler={(value) => dispatch(filtersActions.setCinemaFilter(value))}
     />
   );
 }
