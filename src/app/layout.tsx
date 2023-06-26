@@ -22,20 +22,24 @@ export default function RootLayout({
   return (
     <html lang="ru" className={`${roboto.variable}`}>
       <body>
-        <header className={style.header}>
-          <h1 className={style.siteName}>Билетопоиск</h1>
-          <Link href="#">
-            <Image
-              src="/icons/basket.svg"
-              width="32"
-              height="32"
-              alt="корзина"
-            />
-          </Link>
-        </header>
-        <div className={style.pageContent}>
-          <StoreProvider>{children}</StoreProvider>
-        </div>
+        <StoreProvider>
+          <header className={style.header}>
+            <h1 className={style.siteName}>Билетопоиск</h1>
+            <Link href="/">
+              <Image
+                src="/icons/basket.svg"
+                width="32"
+                height="32"
+                alt="корзина"
+              />
+            </Link>
+          </header>
+          <div className="pageContent">{children}</div>
+          <footer className={style.footer}>
+            <Link href="/">Вопросы-ответы</Link>
+            <Link href="/">О нас</Link>
+          </footer>
+        </StoreProvider>
       </body>
     </html>
   );

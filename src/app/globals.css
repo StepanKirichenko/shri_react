@@ -15,6 +15,7 @@ a,
 a:link,
 a:visited {
   text-decoration: none;
+  color: inherit;
 }
 
 img {
@@ -37,9 +38,17 @@ img {
 }
 
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background-color: var(--clr-white-800);
   color: var(--clr-black-800);
   font-family: var(--ff-roboto), sans-serif;
+}
+
+.pageContent {
+  padding: 24px 32px;
+  flex-grow: 1;
 }
 
 .roundCorners {
