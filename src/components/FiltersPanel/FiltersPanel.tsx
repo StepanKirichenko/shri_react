@@ -1,3 +1,4 @@
+import { TheaterFilter } from "../TheaterFilter/TheaterFilter";
 import style from "./style.module.css";
 
 export function FiltersPanel() {
@@ -12,10 +13,7 @@ export function FiltersPanel() {
         <h3 className={style.filterName}>Жанр</h3>
         <input placeholder="Введите название" />
       </div>
-      <div className={style.filter}>
-        <h3 className={style.filterName}>Кинотеатр</h3>
-        <input placeholder="Введите название" />
-      </div>
+      <TheaterFilter />
     </div>
   );
 }

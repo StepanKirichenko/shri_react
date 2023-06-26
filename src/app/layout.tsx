@@ -25,6 +25,7 @@ export default function RootLayout({
           <Header />
           <div className="pageContent">{children}</div>
           <Footer />
+          <div id="popup-container" className="popupContainer"></div>
         </StoreProvider>
       </body>
     </html>

@@ -1,0 +1,11 @@
+.openButton {
+  text-align: start;
+  width: 100%;
+}
+
+.popup {
+  position: absolute;
+  pointer-events: all;
+  display: flex;
+  flex-direction: column;
+}
