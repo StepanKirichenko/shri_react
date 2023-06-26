@@ -3,6 +3,8 @@
 import { RefObject, useRef, useState } from "react";
 import style from "./style.module.css";
 import { createPortal } from "react-dom";
+import classNames from "classnames";
+import Image from "next/image";
 
 interface DropdownProps {
   placeholderText: string;
@@ -11,7 +13,7 @@ interface DropdownProps {
     displayText: string;
   }[];
   defaultValue?: string;
-  selectHandler: (value: string) => void;
+  selectHandler: (value: string | undefined) => void;
 }
 
 export default function Dropdown(props: DropdownProps) {
@@ -26,26 +28,47 @@ export default function Dropdown(props: DropdownProps) {
     ? selectedOption.displayText
     : props.placeholderText;
 
+  function handleOptionClick(value: string | undefined) {
+    setIsOpen(false);
+    if (value !== selectedValue) {
+      setSelectedValue(value);
+      props.selectHandler?.(value);
+    }
+  }
+
   return (
     <>
       <div>
         <button
-          className={style.openButton}
+          className={classNames("input", style.openButton, {
+            open: isOpen,
+            hasSelection: selectedValue,
+          })}
           ref={openButton}
           onClick={() => setIsOpen(!isOpen)}
         >
           {selectedOptionDisplayText}
+          <Image
+            src={`/icons/arrow-square-${isOpen ? "up" : "down"}.svg`}
+            width="20"
+            height="20"
+            alt=""
+          />
         </button>
         {isOpen &&
           createPortal(
             <div className={style.popup} style={getPopupStyle(openButton)}>
-              <button onClick={() => setSelectedValue(undefined)}>
+              <button
+                className={style.dropdownButton}
+                onClick={() => handleOptionClick(undefined)}
+              >
                 Не выбран
               </button>
               {props.options.map((option) => (
                 <button
                   key={option.value}
-                  onClick={() => setSelectedValue(option.value)}
+                  className={style.dropdownButton}
+                  onClick={() => handleOptionClick(option.value)}
                 >
                   {option.displayText}
                 </button>

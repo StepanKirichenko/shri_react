@@ -1,6 +1,6 @@
-import Dropdown from "../Dropdown/Dropdown";
 import TheaterFilterSelector from "../TheaterFilterSelector/TheaterFilterSelector";
 import style from "./style.module.css";
+import classNames from "classnames";
 
 export interface CinemaDetails {
   id: string;
@@ -15,7 +15,7 @@ export async function TheaterFilter() {
 
   return (
     <div className={style.filter}>
-      <h3 className={style.filterName}>Кинотеатр</h3>
+      <h3 className={classNames("mb-6px", style.filterName)}>Кинотеатр</h3>
       <TheaterFilterSelector cinemas={cinemas} />
     </div>
   );

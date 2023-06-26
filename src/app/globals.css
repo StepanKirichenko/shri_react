@@ -46,6 +46,10 @@ body {
   font-family: var(--ff-roboto), sans-serif;
 }
 
+.mb-6px {
+  margin-bottom: 6px;
+}
+
 .pageContent {
   padding: 24px 32px;
   flex-grow: 1;
@@ -60,4 +64,23 @@ body {
   inset: 0;
   z-index: 100;
   pointer-events: none;
+}
+
+.input {
+  font-size: 14px;
+  padding: 10px 16px;
+  color: var(--clr-gray-300);
+  background-color: var(--clr-white-900);
+  border: 1px solid var(--clr-gray-300);
+  border-radius: var(--border-radius);
+  text-align: start;
+  width: 100%;
+}
+
+.input.open {
+  border-color: var(--clr-orange-600);
+}
+
+.input.hasSelection {
+  color: var(--clr-black-800);
 }
