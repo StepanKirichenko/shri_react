@@ -7,10 +7,14 @@ import { State } from "@/redux/store";
 import { cartActions } from "@/redux/features/cart";
 import Image from "next/image";
 
-export default function TicketCountAdjuster({ movieId }: { movieId: string }) {
+function TicketCount({ movieId }: { movieId: string }) {
   const count = useSelector((state: State) =>
     selectTicketAmount(state, movieId)
   );
+  return <p className={style.ticketCount}>{count}</p>;
+}
+
+export default function TicketCountAdjuster({ movieId }: { movieId: string }) {
   const dispath = useDispatch();
 
   return (
@@ -21,7 +25,7 @@ export default function TicketCountAdjuster({ movieId }: { movieId: string }) {
       >
         <Image src="/icons/minus.svg" width="12" height="12" alt="decrease" />
       </button>
-      <p className={style.ticketCount}>{count}</p>
+      <TicketCount movieId={movieId} />
       <button
         className={style.button}
         onClick={() => dispath(cartActions.increment(movieId))}
