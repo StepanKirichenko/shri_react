@@ -1,0 +1,24 @@
+.card {
+  padding: 24px;
+  display: flex;
+  gap: 24px;
+  background-color: var(--clr-white-900);
+}
+
+.posterImage {
+  object-fit: cover;
+}
+
+.details {
+  flex-grow: 1;
+}
+
+.amount {
+  display: flex;
+  align-items: flex-start;
+}
+
+.genre {
+  font-style: italic;
+  text-transform: capitalize;
+}
