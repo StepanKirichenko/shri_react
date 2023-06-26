@@ -84,3 +84,8 @@ body {
 .input.hasSelection {
   color: var(--clr-black-800);
 }
+
+.filterName {
+  font-size: 14px;
+  font-weight: 300;
+}

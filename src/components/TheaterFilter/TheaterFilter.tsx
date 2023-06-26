@@ -1,5 +1,4 @@
 import TheaterFilterSelector from "../TheaterFilterSelector/TheaterFilterSelector";
-import style from "./style.module.css";
 import classNames from "classnames";
 
 export interface CinemaDetails {
@@ -14,8 +13,8 @@ export async function TheaterFilter() {
   ).then((res) => res.json());
 
   return (
-    <div className={style.filter}>
-      <h3 className={classNames("mb-6px", style.filterName)}>Кинотеатр</h3>
+    <div>
+      <h3 className="mb-6px filterName">Кинотеатр</h3>
       <TheaterFilterSelector cinemas={cinemas} />
     </div>
   );
