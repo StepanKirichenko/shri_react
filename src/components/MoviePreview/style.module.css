@@ -18,7 +18,14 @@
   align-items: flex-start;
 }
 
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
 .genre {
   font-style: italic;
   text-transform: capitalize;
+  font-size: 16px;
 }
