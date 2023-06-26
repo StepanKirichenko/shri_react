@@ -3,6 +3,7 @@ import style from "./style.module.css";
 import classNames from "classnames";
 import TicketCountAdjuster from "../TicketCountAdjuster/TicketCountAdjuster";
 import { Genre, getGenreDisplayName } from "@/lib/utils";
+import Link from "next/link";
 
 const cn = classNames;
 
@@ -33,7 +34,9 @@ export default function MoviePreview({ movie }: MoviePreviewProps) {
         alt={movie.title}
       />
       <div className={style.details}>
-        <h3 className={style.title}>{movie.title}</h3>
+        <h3 className={style.title}>
+          <Link href={`/movie/${movie.id}`}>{movie.title}</Link>
+        </h3>
         <p className={style.genre}>{getGenreDisplayName(movie.genre)}</p>
       </div>
       <div className={style.amount}>
