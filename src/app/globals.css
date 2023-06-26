@@ -75,9 +75,19 @@ body {
   border-radius: var(--border-radius);
   text-align: start;
   width: 100%;
+  outline: none;
 }
 
-.input.open {
+.titleInput {
+  color: var(--clr-black-800);
+}
+
+.titleInput::placeholder {
+  color: var(--clr-gray-300);
+}
+
+.input.open,
+.titleInput:focus {
   border-color: var(--clr-orange-600);
 }
 

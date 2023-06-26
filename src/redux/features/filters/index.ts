@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 type FiltersState = {
   cinemaId?: string;
   genre?: string;
-  search?: string;
+  title?: string;
 };
 
 type SetFilterAction = {
@@ -22,8 +22,8 @@ export const filtersSlice = createSlice({
     setGenreFilter: (state, { payload }: SetFilterAction) => {
       state.genre = payload;
     },
-    setSearchFilter: (state, { payload }: SetFilterAction) => {
-      state.search = payload;
+    setTitleFilter: (state, { payload }: SetFilterAction) => {
+      state.title = payload;
     },
   },
 });
