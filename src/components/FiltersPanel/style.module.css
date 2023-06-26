@@ -1,10 +1,21 @@
 .panel {
-  max-height: calc(100dvh - 108px - 110px);
+  max-height: calc(100vh - 108px - 110px);
   padding: 24px;
   display: flex;
+  flex-direction: column;
   gap: 24px;
   background-color: var(--clr-white-900);
   border-radius: 8px;
   position: sticky;
-  top: 108px;
+  top: 110px;
+}
+
+.panelHeading {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.filterName {
+  font-size: 14px;
+  font-weight: 300;
 }
