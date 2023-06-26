@@ -1,10 +1,9 @@
 import { StoreProvider } from "@/redux/StoreProvider";
 import "./globals.css";
-import style from "./layout-styles.module.css";
 
 import { Roboto } from "next/font/google";
-import Link from "next/link";
-import Image from "next/image";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 const roboto = Roboto({
   weight: ["400", "700"],
@@ -23,22 +22,9 @@ export default function RootLayout({
     <html lang="ru" className={`${roboto.variable}`}>
       <body>
         <StoreProvider>
-          <header className={style.header}>
-            <h1 className={style.siteName}>Билетопоиск</h1>
-            <Link href="/">
-              <Image
-                src="/icons/basket.svg"
-                width="32"
-                height="32"
-                alt="корзина"
-              />
-            </Link>
-          </header>
+          <Header />
           <div className="pageContent">{children}</div>
-          <footer className={style.footer}>
-            <Link href="/">Вопросы-ответы</Link>
-            <Link href="/">О нас</Link>
-          </footer>
+          <Footer />
         </StoreProvider>
       </body>
     </html>

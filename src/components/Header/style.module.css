@@ -10,13 +10,3 @@
   align-items: center;
   padding: 24px 32px;
 }
-
-.footer {
-  background-color: var(--clr-gray-900);
-  color: var(--clr-white-900);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 32px;
-  flex-shrink: 0;
-}
