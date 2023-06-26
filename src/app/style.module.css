@@ -1,0 +1,5 @@
+.page {
+  display: grid;
+  grid-template-columns: 408px 1fr;
+  column-gap: 24px;
+}

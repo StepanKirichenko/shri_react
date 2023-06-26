@@ -1,0 +1,10 @@
+.panel {
+  max-height: calc(100dvh - 108px - 110px);
+  padding: 24px;
+  display: flex;
+  gap: 24px;
+  background-color: var(--clr-white-900);
+  border-radius: 8px;
+  position: sticky;
+  top: 108px;
+}
