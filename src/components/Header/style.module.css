@@ -10,3 +10,20 @@
   align-items: center;
   padding: 24px 32px;
 }
+
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ticketCounter {
+  background-color: var(--clr-orange-600);
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  display: grid;
+  place-content: center;
+}
