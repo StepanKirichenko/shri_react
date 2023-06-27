@@ -27,3 +27,8 @@
   display: grid;
   place-content: center;
 }
+
+.siteName {
+  font-size: 32px;
+  font-weight: 700;
+}

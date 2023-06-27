@@ -26,7 +26,9 @@ function TicketCounter() {
 export default function Header() {
   return (
     <header className={style.header}>
-      <h1 className={style.siteName}>Билетопоиск</h1>
+      <Link href="/" className={style.siteName}>
+        Билетопоиск
+      </Link>
       <div className={style.cart}>
         <TicketCounter />
         <Link href="/">
