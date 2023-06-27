@@ -32,7 +32,9 @@ export const cartSlice = createSlice({
       state[payload] = count - 1;
     },
 
-    reset: () => initialState,
+    reset: (state, { payload }: ChangeTicketAmoutAction) => {
+      delete state[payload];
+    },
   },
 });
 
