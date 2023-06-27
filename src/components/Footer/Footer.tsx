@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className={style.footer}>
       <Link href="/">Вопросы-ответы</Link>
-      <Link href="/">О нас</Link>
+      <Link href="/about">О нас</Link>
     </footer>
   );
 }
