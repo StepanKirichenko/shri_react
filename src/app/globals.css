@@ -53,6 +53,8 @@ body {
 .pageContent {
   padding: 24px 32px;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .roundCorners {

@@ -5,6 +5,7 @@ import style from "./style.module.css";
 import {
   selectCartModule,
   selectCartMovieIds,
+  selectTicketTotalAmount,
 } from "@/redux/features/cart/selector";
 import { State } from "@/redux/store";
 import MoviePreview, {
@@ -14,6 +15,7 @@ import { useEffect, useState } from "react";
 
 export default function CartPage() {
   const cart = useSelector((state: State) => selectCartModule(state));
+  const count = useSelector((state: State) => selectTicketTotalAmount(state));
 
   const [isLoading, setIsLoading] = useState(true);
   const [movies, setMovies] = useState<MovieDetails[]>([]);
@@ -42,7 +44,7 @@ export default function CartPage() {
   }, [cart]);
 
   return (
-    <main>
+    <main className={style.page}>
       {isLoading ? (
         <div>Загрузка...</div>
       ) : (
@@ -50,6 +52,10 @@ export default function CartPage() {
           {movies.map((movie) => (
             <MoviePreview key={movie.id} movie={movie} isInCart={true} />
           ))}
+          <div className={style.totalContainer}>
+            <p>Итого билетов:</p>
+            <p>{count}</p>
+          </div>
         </div>
       )}
     </main>
