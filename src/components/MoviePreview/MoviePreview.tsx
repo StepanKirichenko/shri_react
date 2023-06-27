@@ -21,9 +21,10 @@ export interface MovieDetails {
 
 interface MoviePreviewProps {
   movie: MovieDetails;
+  isInCart?: boolean;
 }
 
-export default function MoviePreview({ movie }: MoviePreviewProps) {
+export default function MoviePreview({ movie, isInCart }: MoviePreviewProps) {
   return (
     <div className={cn(style.card, "roundCorners")}>
       <Image
@@ -40,7 +41,7 @@ export default function MoviePreview({ movie }: MoviePreviewProps) {
         <p className={style.genre}>{getGenreDisplayName(movie.genre)}</p>
       </div>
       <div className={style.amount}>
-        <TicketCountAdjuster movieId={movie.id} />
+        <TicketCountAdjuster movieId={movie.id} isInCart={isInCart} />
       </div>
     </div>
   );

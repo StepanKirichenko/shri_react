@@ -31,7 +31,7 @@ export default function Header() {
       </Link>
       <div className={style.cart}>
         <TicketCounter />
-        <Link href="/">
+        <Link href="/cart">
           <Image src="/icons/basket.svg" width="32" height="32" alt="корзина" />
         </Link>
       </div>
