@@ -1,8 +1,8 @@
 const genreDisplayNames = {
-  fantasy: "фэнтези",
-  horror: "ужасы",
-  action: "боевик",
-  comedy: "комедия",
+  fantasy: "Фэнтези",
+  horror: "Ужасы",
+  action: "Боевик",
+  comedy: "Комедия",
 };
 
 export type Genre = keyof typeof genreDisplayNames;
